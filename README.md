@@ -1,4 +1,4 @@
-# Jupyter-to-PDF-
+# Jupyter-to-PDF
   Convert Jupyter notebook files to PDF
 
 ## Usage 
@@ -10,7 +10,7 @@ Add this to `.github/workflow/action.yml`
 
 
 ```
-name: Jupyter to Markdown
+name: Jupyter to PDF
 on:
   push:
     paths:
