@@ -1,8 +1,8 @@
 #!/bin/sh
 
-#loop over all notebooks and run nbconvert to pdf over them
-
-for i in $(find '.' | greb -F .ipynb); do 
-  jupyter nbconvert --to pdf
+# loop over all notebooks and run nbconvert over them
+for i in $(find . | grep -F .ipynb); do
+  jupyter nbconvert --to markdown $i
   echo $i
-done  
+done
+
