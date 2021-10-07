@@ -1,0 +1,10 @@
+#action.yml
+
+name: 'Jupyter Notebooks to PDF'
+description: 'Convert Jupyter Notebooks within the repository to PDF files'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding: 
+  icon: 'book-open'
+  color: 'green'  
