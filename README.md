@@ -10,7 +10,7 @@ Add this to `.github/workflow/action.yml`
 
 
 ```
-name: Jupyter to Markdown
+name: Jupyter to PDF
 on:
   workflow_dispatch:
   push:
@@ -24,19 +24,19 @@ jobs:
     - uses: actions/checkout@v2
       with:
         ref: ${{ github.head_ref }}
-    - name: Jupyter Notebooks to Markdown
-      uses: MohamedElashri/Jupyter-to-Markdown@v1
+    - name: Jupyter Notebooks to PDF
+      uses: MohamedElashri/Jupyter-to-PDF@v1.3
     - name: workaround for permission denied problem  
       run: |
           sudo chown -R $USER:$USER .
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
       with:
-        commit-message: Pull request with the Convreted markdown files
+        commit-message: Pull request with the Convreted PDF files
         committer: Mohamed Elashri <MohamedElashri@users.noreply.github.com>
-        title: Convert file from .ipynb to .md 
+        title: Convert file from .ipynb to .PDF 
         body: This is an auto-generated PR
-        branch: md
+        branch: PDF
 ```
 
 `branch` and `base` can't be the same. `branch` is where the automatic pull requests will be pushed  
